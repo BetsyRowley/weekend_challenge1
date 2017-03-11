@@ -1,0 +1,24 @@
+body {
+  background-color: DarkCyan;
+}
+
+.studentContainer #name{
+  font-size: 60px;
+}
+
+.studentContainer #shoutOut{
+  font-size: 30px;
+}
+
+#singleImage img {
+  width: 500px;
+  height: 333.2 5px;
+}
+
+.navigators button {
+  font-size: 20px;
+  margin: 10px;
+  width: 100px;
+  background-color: DarkBlue;
+  color: DarkCyan;
+}
