@@ -4,13 +4,30 @@ var profileDivArray = [];
 
 $(document).ready(function() {
 
-createProfiles();
-
 createGallery();
+
+//Show profile
+if(//class is active) {
+  $(".studentContainer").append("<div></div>");
+
+  var $el = $(".studentContainer").children().last();
+
+  $el.append("<img src=" + peopleArray[i].image + ">");
+  $el.append("<p id = 'name'>" + peopleArray[i].name + "</p>");
+  $el.append("<p id = 'shoutOut'>" + peopleArray[i].shoutout + "</p>");
+}
+
+//Selects next student
+$(".navigators").on("click","#next", function(){
+    //add one to index, activate the next profile
+
+});
 
 
 
 });
+
+
 
 
 //Adds name & shoutout for each person
@@ -32,14 +49,7 @@ function createProfiles() {
   }
 }
 
-
-
-// Creates gallery
-// function createGallery() {
-// for( var i = 0; i < peopleArray.length; i++) {
-//   $(".gallery").append("<img src=" + peopleArray[i].image + ">");
-//   }
-// }
+//Creates Gallery of all photos
 
 function createGallery() {
 for( var i = 0; i < numStudents; i++) {
@@ -48,5 +58,17 @@ for( var i = 0; i < numStudents; i++) {
   $el.append("<img src=" + peopleArray[i].image + ">");
   $el.data("id", i);
   profileDivArray.push($el);
+  }
+
+  makeActive();
+}
+
+function makeActive() {
+  for ( var i = 0; i < profileDivArray.length; i++) {
+    $(profileDivArray[i]).removeClass("active");
+    if(profileDivArray[i].data("id") == index) {
+      profileDivArray[i].addClass("active");
+
+    }
   }
 }

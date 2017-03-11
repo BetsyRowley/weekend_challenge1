@@ -51,14 +51,21 @@ h1 {
 .profile {
   width: 53px;
   height: 35px;
-  background-color: grey;
   margin: 1px;
+  background-color: grey;
   display: inline-block;
 }
+
 
 .gallery img{
   width: 53px;
   height: 35px;
   border: 1px solid black;
-  display: inline-block;
+}
+
+.active {
+  width: 53px;
+  height: 35px;
+  order: 2px solid MediumVioletRed;
+
 }
