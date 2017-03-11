@@ -4,6 +4,8 @@ createProfiles();
 
 createGallery();
 
+//Add eve
+
 });
 
 
@@ -19,12 +21,13 @@ function createProfiles() {
   $el.append("<img src=" + peopleArray[i].image + ">");
   $el.append("<p id = 'name'>" + peopleArray[i].name + "</p>");
   $el.append("<p id = 'shoutOut'>" + peopleArray[i].shoutout + "</p>");
-  }
 
-  // $("#singleImage").append("<img src=" + peopleArray[i].image + ">");
-  // $(".studentText").append("<p id = 'name'>" + peopleArray[i].name + "</p>");
-  // $(".studentText").append("<p id = 'shoutOut'>" + peopleArray[i].shoutout + "</p>");
+  if(i != 0) {
+    $el.hide("div");
+  }
+  }
 }
+
 
 
 // Creates gallery
