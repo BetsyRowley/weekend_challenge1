@@ -1,5 +1,8 @@
 var peopleArray = [
-  {name: "Anisa Abdulkadir", shoutout: "Anisa showed me up with her Atom packages. Now its time for some retaliation."},
+  {name: "Anisa Abdulkadir",
+    shoutout: "Anisa showed me up with her Atom packages. Now its time for some retaliation.",
+    image: "Chi/Anisa Abdulkadir 2.jpg"
+  },
   {name: "Anna Springfield", shoutout: "Thanks to Anna for continuing to be a resource for asking tough questions, and for having good conversations."},
   {name: "Christopher Keller", shoutout: "Thanks to Chris for his speech today. I appreciated him talking about his family growing up and sharing. "},
   {name: "Claudia Calderas Mendez", shoutout: "I had great comfort and support when working with Claudia today."},

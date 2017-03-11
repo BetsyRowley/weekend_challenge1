@@ -2,17 +2,38 @@ body {
   background-color: DarkCyan;
 }
 
+h1 {
+  font-size: 80px;
+  color: MediumVioletRed;
+  text-align: center;
+}
+
+.studentContainer {
+  margin: 50px 50px 200px 50px;
+}
+
+#name, #shoutOut, #singleImage {
+  margin: 20px;
+}
+
 .studentContainer #name{
   font-size: 60px;
 }
 
 .studentContainer #shoutOut{
   font-size: 30px;
+  color: white;
 }
 
 #singleImage img {
-  width: 500px;
-  height: 333.2 5px;
+  width: 375px;
+  height: 250px;
+  border: 5px solid black;
+  float: right;
+}
+
+.navigators {
+  margin: 20px;
 }
 
 .navigators button {
@@ -21,4 +42,15 @@ body {
   width: 100px;
   background-color: DarkBlue;
   color: DarkCyan;
+}
+
+.navigators p {
+  font-size: 20px;
+}
+
+.gallery img{
+  width: 53px;
+  height: 35px;
+  border: 1px solid black;
+  display: inline-block;
 }
