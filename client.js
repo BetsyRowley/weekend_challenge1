@@ -12,32 +12,10 @@ $(".navigators").on("click", "#previous", backInterval);
 //setInterval(forwardInterval, 10000);
 
 
-createProfiles();
 
 
 });
 
-
-
-
-//Adds name & shoutout for each person
-
-function createProfiles() {
-  for( var i = 0; i < peopleArray.length; i++) {
-
-  $(".studentContainer").append("<div></div>");
-
-  var $el = $(".studentContainer").children().last();
-
-  $el.append("<img src=" + peopleArray[i].image + ">");
-  $el.append("<p id = 'name'>" + peopleArray[i].name + "</p>");
-  $el.append("<p id = 'shoutOut'>" + peopleArray[i].shoutout + "</p>");
-
-  if(i !== 0) {
-    $el.hide("div");
-  }
-  }
-}
 
 //Creates Gallery of all photos
 
@@ -53,14 +31,29 @@ for( var i = 0; i < numStudents; i++) {
   makeActive();
 }
 
+//Activates one profile at a time
 function makeActive() {
   for ( var i = 0; i < profileDivArray.length; i++) {
     $(profileDivArray[i]).removeClass("active");
     if(profileDivArray[i].data("id") == index) {
       profileDivArray[i].addClass("active");
+
+//updates view number of 19
+    $("#viewNum").text("Currently viewing " + (index + 1) + " of 19 ChiYaks.");
+//Shows main profile info
+      $(".studentContainer").empty();
+      $(".studentContainer").append("<div></div>");
+
+      var $el = $(".studentContainer").children().last();
+
+      $el.append("<img src=" + peopleArray[i].image + ">");
+      $el.append("<p id = 'name'>" + peopleArray[i].name + "</p>");
+      $el.append("<p id = 'shoutOut'>" + peopleArray[i].shoutout + "</p>");
     }
   }
 }
+
+//Moves forward through the gallery
 
 function forwardInterval() {
   index++;
@@ -70,6 +63,7 @@ function forwardInterval() {
   makeActive();
 }
 
+//Moves backwards through the gallery
 function backInterval() {
   index--;
   if(index < 0) {
@@ -77,3 +71,23 @@ function backInterval() {
   }
   makeActive();
 }
+
+
+//Adds name & shoutout for each person
+
+// function createProfiles() {
+//   for( var i = 0; i < peopleArray.length; i++) {
+//
+//   $(".studentContainer").append("<div></div>");
+//
+//   var $el = $(".studentContainer").children().last();
+//
+//   $el.append("<img src=" + peopleArray[i].image + ">");
+//   $el.append("<p id = 'name'>" + peopleArray[i].name + "</p>");
+//   $el.append("<p id = 'shoutOut'>" + peopleArray[i].shoutout + "</p>");
+//
+//   if(i !== 0) {
+//     $el.hide("div");
+//   }
+//   }
+// }

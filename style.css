@@ -9,8 +9,11 @@ h1 {
 }
 
 .studentContainer {
-  margin: 50px 50px 200px 50px;
+  width: 1000px;
+  height: 300px;
+  margin: 50px;
 }
+
 
 #name, #shoutOut, .studentContainer img {
   margin: 20px;
