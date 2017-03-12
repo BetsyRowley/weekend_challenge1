@@ -6,11 +6,13 @@ $(document).ready(function() {
 
 createGallery();
 
+$(".navigators").on("click", "#next", forwardInterval);
+$(".navigators").on("click", "#previous", backInterval);
 
+//setInterval(forwardInterval, 10000);
 
 
 createProfiles();
-
 
 
 });
@@ -56,7 +58,22 @@ function makeActive() {
     $(profileDivArray[i]).removeClass("active");
     if(profileDivArray[i].data("id") == index) {
       profileDivArray[i].addClass("active");
-
     }
   }
+}
+
+function forwardInterval() {
+  index++;
+  if(index == numStudents) {
+    index = 0;
+  }
+  makeActive();
+}
+
+function backInterval() {
+  index--;
+  if(index < 0) {
+    index = numStudents - 1;
+  }
+  makeActive();
 }
