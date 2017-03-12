@@ -2,11 +2,15 @@ var index = 0;
 var numStudents = peopleArray.length;
 var profileDivArray = [];
 
+var setTimer = setInterval(forwardInterval, 10000);
+
 $(document).ready(function() {
 
 createGallery();
 
+
 $(".navigators").on("click", "#next", forwardInterval);
+$(".navigators").on("click", "#next", stopTimer);
 $(".navigators").on("click", "#previous", backInterval);
 
 //setInterval(forwardInterval, 10000);
@@ -15,6 +19,7 @@ $(".navigators").on("click", "#previous", backInterval);
 
 
 });
+
 
 
 //Creates Gallery of all photos
@@ -49,9 +54,11 @@ function makeActive() {
       $el.append("<img src=" + peopleArray[i].image + ">");
       $el.append("<p id = 'name'>" + peopleArray[i].name + "</p>");
       $el.append("<p id = 'shoutOut'>" + peopleArray[i].shoutout + "</p>");
+
     }
   }
 }
+
 
 //Moves forward through the gallery
 
@@ -61,6 +68,11 @@ function forwardInterval() {
     index = 0;
   }
   makeActive();
+}
+
+function stopTimer() {
+  clearInterval(setTimer);
+  setTimer = setInterval(forwardInterval, 10000);
 }
 
 //Moves backwards through the gallery
