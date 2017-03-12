@@ -64,8 +64,8 @@ h1 {
 }
 
 .active {
-  width: 53px;
-  height: 35px;
-  order: 2px solid MediumVioletRed;
+  width: 59px;
+  height: 41px;
+  background-color: MediumVioletRed;
 
 }

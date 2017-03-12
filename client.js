@@ -6,22 +6,10 @@ $(document).ready(function() {
 
 createGallery();
 
-//Show profile
-if(//class is active) {
-  $(".studentContainer").append("<div></div>");
 
-  var $el = $(".studentContainer").children().last();
 
-  $el.append("<img src=" + peopleArray[i].image + ">");
-  $el.append("<p id = 'name'>" + peopleArray[i].name + "</p>");
-  $el.append("<p id = 'shoutOut'>" + peopleArray[i].shoutout + "</p>");
-}
 
-//Selects next student
-$(".navigators").on("click","#next", function(){
-    //add one to index, activate the next profile
-
-});
+createProfiles();
 
 
 
