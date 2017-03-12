@@ -12,6 +12,7 @@ createGallery();
 $(".navigators").on("click", "#next", forwardInterval);
 $(".navigators").on("click", "#next", stopTimer);
 $(".navigators").on("click", "#previous", backInterval);
+$(".navigators").on("click", "#previous", stopTimer);
 
 //setInterval(forwardInterval, 10000);
 
@@ -70,10 +71,6 @@ function forwardInterval() {
   makeActive();
 }
 
-function stopTimer() {
-  clearInterval(setTimer);
-  setTimer = setInterval(forwardInterval, 10000);
-}
 
 //Moves backwards through the gallery
 function backInterval() {
@@ -85,21 +82,8 @@ function backInterval() {
 }
 
 
-//Adds name & shoutout for each person
-
-// function createProfiles() {
-//   for( var i = 0; i < peopleArray.length; i++) {
-//
-//   $(".studentContainer").append("<div></div>");
-//
-//   var $el = $(".studentContainer").children().last();
-//
-//   $el.append("<img src=" + peopleArray[i].image + ">");
-//   $el.append("<p id = 'name'>" + peopleArray[i].name + "</p>");
-//   $el.append("<p id = 'shoutOut'>" + peopleArray[i].shoutout + "</p>");
-//
-//   if(i !== 0) {
-//     $el.hide("div");
-//   }
-//   }
-// }
+//On clicking next button resets timer
+function stopTimer() {
+  clearInterval(setTimer);
+  setTimer = setInterval(forwardInterval, 10000);
+}
