@@ -14,12 +14,15 @@ $(".navigators").on("click", "#next", stopTimer);
 $(".navigators").on("click", "#previous", backInterval);
 $(".navigators").on("click", "#previous", stopTimer);
 
-//setInterval(forwardInterval, 10000);
-
-
+//$("button").on("click", fadeProfile);
 
 
 });
+
+///fades profile in and out
+function fadeProfile(){
+  (".active").fadeOut("slow");
+}
 
 
 
@@ -50,7 +53,7 @@ function makeActive() {
       $(".studentContainer").empty();
       $(".studentContainer").append("<div></div>");
 
-      var $el = $(".studentContainer").children().last();
+      var $el = $(".studentContainer").children().last().hide().fadeIn("slow");
 
       $el.append("<img src=" + peopleArray[i].image + ">");
       $el.append("<p id = 'name'>" + peopleArray[i].name + "</p>");
