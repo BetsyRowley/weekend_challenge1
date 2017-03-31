@@ -1,0 +1,27 @@
+{
+  "name": "weekendchallenge1",
+  "version": "1.0.0",
+  "description": "Welcome to your first-weekend challenge!",
+  "main": "data.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BetsyRowley/weekend_chal_1_new.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BetsyRowley/weekend_chal_1_new/issues"
+  },
+  "homepage": "https://github.com/BetsyRowley/weekend_chal_1_new#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "express": "^4.15.2",
+    "grunt": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "jquery": "^3.2.1"
+  }
+}

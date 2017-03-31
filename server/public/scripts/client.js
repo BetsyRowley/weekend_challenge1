@@ -14,15 +14,12 @@ $(".navigators").on("click", "#next", stopTimer);
 $(".navigators").on("click", "#previous", backInterval);
 $(".navigators").on("click", "#previous", stopTimer);
 
-//$("button").on("click", fadeProfile);
+
 
 
 });
 
-///fades profile in and out
-function fadeProfile(){
-  (".active").fadeOut("slow");
-}
+
 
 
 
@@ -67,6 +64,7 @@ function makeActive() {
 //Moves forward through the gallery
 
 function forwardInterval() {
+
   index++;
   if(index == numStudents) {
     index = 0;
