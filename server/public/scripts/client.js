@@ -29,7 +29,7 @@ function createGallery() {
 for( var i = 0; i < numStudents; i++) {
   $(".gallery").append("<div class = 'profile'></div>");
   var $el = $(".gallery").children().last();
-  $el.append("<img src=" + peopleArray[i].image + ">");
+  $el.append("<img class = 'img-rounded' src=" + peopleArray[i].image + ">");
   $el.data("id", i);
   profileDivArray.push($el);
   }
@@ -52,7 +52,7 @@ function makeActive() {
 
       var $el = $(".studentContainer").children().last().hide().fadeIn("slow");
 
-      $el.append("<img src=" + peopleArray[i].image + ">");
+      $el.append("<img class = 'img-circle' src=" + peopleArray[i].image + ">");
       $el.append("<p id = 'name'>" + peopleArray[i].name + "</p>");
       $el.append("<p id = 'shoutOut'>" + peopleArray[i].shoutout + "</p>");
 
