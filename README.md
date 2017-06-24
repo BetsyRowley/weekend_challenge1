@@ -6,7 +6,7 @@ This first weekend challenge adds jQuery to build on our HTML and CSS skills to 
 
 A few weeks later I added Bootstrap, Node and Grunt as those were learned.
 
-![Carousel App](carosel.png)
+![Carousel App](carousel.png)
 
 ## Getting Started
 
