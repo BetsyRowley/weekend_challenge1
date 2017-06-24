@@ -1,21 +1,51 @@
-#Weekend Challenge 01
+# Carousel Application
 
-Welcome to your first-weekend challenge!
+This project was completed as a weekend assignment during my 20 weeks as a Full Stack Software Engineering student at Prime Digital Academy.
 
-We have created a Javascript file that has an array of Objects. Each one of you is represented as an object with some shout out feedback given to you by your peers! Awesome right?
+This first weekend challenge adds jQuery to build on our HTML and CSS skills to create a Carousel. The Carousel will automatically transition to the next person after 10 seconds. Alternatively, you can navigate the Carousel with the previous/next buttons.
 
-What I would like to see on the DOM, is one person at a time represented by showing their name and their shout out. On the screen should also be "Prev" and "Next" buttons, that when pressed, show the information for the next or previous person. These should wrap - "prev" when on the first person should wrap around to show the last person and vice versa. 
+A few weeks later I added Bootstrap, Node and Grunt as those were learned.
 
-Also on the DOM should be a display showing the number of people and which is being currently viewed (eg. "2/20")
+![Carousel App](carosel.png)
 
-When a person is displayed, show their name (first & last) and their shout out. Only one person should be shown at any given time. 
+## Getting Started
 
-Possible look for the final application:
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-http://i.imgur.com/9Dkkrci.png
+### Prerequisites
 
-###HARD MODE
-Include a fade out and fade in animation in-between transitioning people.
+You will need to have the following software installed.
 
-###PRO MODE
-Include a timer that moves to the next person if the user is not clicking on next or prev. If the user clicks on next or prev, the timer should be reset. The timer should transition between people every 10 seconds. 
+`Node.js (https://nodejs.org/en/)`
+
+### Installing
+
+Steps to get the development environment running.
+
+1. Clone the repository to your local machine. `git clone https://github.com/BetsyRowley/weekend_challenge1.git`
+
+2. Install all dependencies. `npm install`
+
+3. Start Grunt. `grunt`
+
+4. Spin up the Server. `npm start`
+
+5. Open in the browser. `localhost:8000`
+
+## Built With
+
+* Express.js
+* jQuery
+* Node.js
+* Bootstrap
+* HTML5
+* CSS3
+* Grunt
+
+## Authors
+
+* [**Betsy Rowley**](https://github.com/BetsyRowley)
+
+## Acknowledgments
+
+* Prime Digital Academy Instructors Chris Black and Scott Bromander for their on-going support.
